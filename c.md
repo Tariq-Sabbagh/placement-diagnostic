@@ -8,7 +8,7 @@ case all count).
 
 For example, the input `Education` should print `5`, and `RHYTHM` should print `0`.
 
-→ Save as `c/vowels.c`
+→ Complete `c/vowels.c`
 
 ---
 
@@ -33,4 +33,4 @@ gcc -Wall -Wextra -fsanitize=address -g -o linkedlist c/linkedlist.c && ./linked
 Add a one-sentence comment at the top explaining how `prepend` allocates and links a node, and how
 `free_list` avoids both leaks and use-after-free.
 
-→ Save as `c/linkedlist.c`
+→ Complete `c/linkedlist.c`

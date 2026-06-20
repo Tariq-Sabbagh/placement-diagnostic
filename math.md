@@ -3,8 +3,8 @@
 Three written problems, from linear algebra to multivariable calculus. Work through them in order and stop
 when the material becomes unfamiliar — leaving a problem blank is expected and tells us where to start you.
 
-Put your solutions in `math/solutions.md` (LaTeX) **or** commit clear photos/scans under `math/`. Label
-each answer with its id (**M-1**, **M-2**, **M-3**) and **show your working**, not just the final answer.
+Fill in your answers in the provided `math/solutions.md` (it has a section per problem), **or** delete a
+section and commit a clear photo/scan under `math/` instead. **Show your working**, not just the final answer.
 
 ---
 

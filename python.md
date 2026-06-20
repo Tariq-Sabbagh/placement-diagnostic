@@ -2,7 +2,7 @@
 
 ## 1. Word Frequencies
 
-Create a file `python/word_count_input.txt` containing exactly this text:
+The provided `python/word_count_input.txt` contains this text:
 
 ```
 The cat sat on the mat. The cat saw the dog,
@@ -21,7 +21,7 @@ Write a program that:
 **Standard library only** (no third-party packages). Choose a sensible, deterministic tie-break if two
 words have the same count.
 
-→ Save as `python/word_count.py`
+→ Complete `python/word_count.py`
 
 ---
 
@@ -37,7 +37,7 @@ Build a small class hierarchy:
 Then, given a list of **mixed** shapes (include at least two circles and two rectangles), use a **single
 loop** to print each shape and accumulate the **total area** across all of them. Print the total at the end.
 
-→ Save as `python/shapes.py`
+→ Complete `python/shapes.py`
 
 ---
 
@@ -70,26 +70,9 @@ D = [[ 0,  2],     # e.g. D[1, 0] = (3-0)**2 + (4-0)**2 = 25
      [ 5,  1]]     # shape (3, 2)
 ```
 
-**Your task.** First put the reference function below into a file `python/slow_distances.py` (do **not**
-modify it) — it computes exactly this result the slow way, with nested Python loops:
+**Your task.** Open the starter file **`python/distances.py`**. It already contains `slow` (the reference
+implementation — don't change it) and a `fast` stub marked `TODO`. Fill in the body of `fast` so it returns
+the **same** result as `slow`, using **only NumPy operations — no `for` loops or list comprehensions**.
+Then run it (`python python/distances.py`); it should print `Match: True`.
 
-```python
-def slow(a, b):
-    n, m = len(a), len(b)
-    out = [[0.0 for _ in range(m)] for _ in range(n)]
-    for i in range(n):
-        for j in range(m):
-            total = 0.0
-            for k in range(len(a[i])):
-                diff = a[i][k] - b[j][k]
-                total += diff * diff
-            out[i][j] = total
-    return out
-```
-
-Then write `def fast(a, b)` that returns the **same** result using **only NumPy — no Python `for` loops or
-comprehensions** inside `fast`. Finally, in the same file: import `slow` from `slow_distances.py`, build a
-small `a` and `b` (the example above is fine), and check the two agree with
-`np.allclose(slow(a, b), fast(a, b))` — **print that result** (it should print `True`).
-
-→ Save as `python/distances.py` (keep `slow_distances.py` alongside it so the import works)
+→ Complete `python/distances.py`

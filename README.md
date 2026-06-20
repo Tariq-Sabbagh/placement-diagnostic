@@ -32,8 +32,8 @@ You'll answer questions in three areas — **C**, **Python**, and **Math**:
 
 You're already in the repository — it was created from our template. Work directly in it:
 
-1. **Create folders** `c/`, `python/`, and `math/` for your answers, and save each answer to the path its
-   question gives (e.g. `c/vowels.c`).
+1. **The `c/`, `python/`, and `math/` folders already contain starter files** — open each one and complete
+   it (every file points back to its question). Don't rename or move them.
 2. **Getting your code into the repo.** Write and test wherever you like (cs50.dev, Colab, locally), then
    commit each file:
    - **No git needed:** on your repo's page, use **Add file → Create new file** (paste your code) or
