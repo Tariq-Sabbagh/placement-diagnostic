@@ -43,10 +43,35 @@ loop** to print each shape and accumulate the **total area** across all of them.
 
 ## 3. Vectorized Pairwise Distances
 
-Put the reference function below into a file `python/slow_distances.py` (do **not** modify it). It computes,
-with nested Python loops, the **squared Euclidean distance** between every row of `a` and every row of `b`:
-for 2D arrays `a` (shape $n \times d$) and `b` (shape $m \times d$) it returns an $n \times m$ result whose
-entry $(i, j)$ is $\sum_{k} (a_{ik} - b_{jk})^2$.
+**The goal.** Given two sets of points, compute the squared distance from *every* point in the first set to
+*every* point in the second — using NumPy **broadcasting** instead of Python loops. (This is the core
+operation behind k-nearest-neighbours and a lot of ML code.)
+
+**Inputs.** `a` and `b` are 2D NumPy arrays where each **row is a point**. `a` has shape $n \times d$
+($n$ points in $d$ dimensions); `b` has shape $m \times d$ ($m$ points, same dimension $d$).
+
+**Output.** A NumPy array `D` of shape $n \times m$ where `D[i, j]` is the squared Euclidean distance
+between row `i` of `a` and row `j` of `b`:
+
+$$D[i,j] = \sum_{k=1}^{d} \left(a_{ik} - b_{jk}\right)^2.$$
+
+**Concrete example.** For
+
+```python
+a = np.array([[0, 0], [3, 4], [1, 2]])   # 3 points, shape (3, 2)
+b = np.array([[0, 0], [1, 1]])           # 2 points, shape (2, 2)
+```
+
+the answer is
+
+```python
+D = [[ 0,  2],     # e.g. D[1, 0] = (3-0)**2 + (4-0)**2 = 25
+     [25, 13],
+     [ 5,  1]]     # shape (3, 2)
+```
+
+**Your task.** First put the reference function below into a file `python/slow_distances.py` (do **not**
+modify it) — it computes exactly this result the slow way, with nested Python loops:
 
 ```python
 def slow(a, b):
@@ -62,8 +87,9 @@ def slow(a, b):
     return out
 ```
 
-Write `def fast(a, b)` that computes the **same** result using **only NumPy broadcasting / vectorization —
-no Python `for` loops** in `fast`. Import `slow` from `slow_distances.py`, then verify your implementation
-against it with `np.allclose(...)` on a small example and print whether they match.
+Then write `def fast(a, b)` that returns the **same** result using **only NumPy — no Python `for` loops or
+comprehensions** inside `fast`. Finally, in the same file: import `slow` from `slow_distances.py`, build a
+small `a` and `b` (the example above is fine), and check the two agree with
+`np.allclose(slow(a, b), fast(a, b))` — **print that result** (it should print `True`).
 
 → Save as `python/distances.py` (keep `slow_distances.py` alongside it so the import works)
