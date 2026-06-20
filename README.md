@@ -30,20 +30,10 @@ You'll answer questions in three areas — **C**, **Python**, and **Math**:
 
 ## How to submit
 
-You're already in the repository — it was created from our template. Work directly in it:
-
-1. **The `c/`, `python/`, and `math/` folders already contain starter files** — open each one and complete
-   it (every file points back to its question). Don't rename or move them.
-2. **Getting your code into the repo.** Write and test wherever you like (cs50.dev, Colab, locally), then
-   commit each file:
-   - **No git needed:** on your repo's page, use **Add file → Create new file** (paste your code) or
-     **Upload files**, then **Commit** — this works straight from the browser.
-   - **From Colab:** *File → Download → `.py`*, then upload it as above.
-   - **From cs50.dev or locally:** use the terminal — `git add`, `git commit`, `git push`.
-3. **Commit each task as you finish it**, not all at once — your commit history shows us your real process.
-4. **Math:** type your working in `math/solutions.md` (LaTeX, `$...$` inline / `$$...$$` display), **or**
-   commit clear photos/scans under `math/` (e.g. `math/m1.jpg`). Either way, show your working and label
-   each part **M-1**, **M-2**, **M-3**.
-5. **Send us your repository URL** when you're done (make sure we have access if it's private).
+1. **Make your own copy of this repo** — click **Use this template → Create a new repository** (or fork it).
+2. **Complete the starter files** in `c/`, `python/`, and `math/` — each one points back to its question.
+   Commit as you go; one commit per task is ideal. *(New to git? You can edit and commit files right on
+   GitHub's website via **Add file** / the pencil icon — no local setup needed.)*
+3. **Send us the link to your copy** when you're done. If it's private, add us as a collaborator.
 
 Good luck — and remember, the honest answer is the right answer here.
