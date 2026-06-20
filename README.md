@@ -3,8 +3,7 @@
 Welcome. This is a short **placement check, not a pass/fail exam.** Its only job is to start you at the
 right phase of the bootcamp so you neither repeat what you already know nor drown in what you don't.
 
-You'll answer questions in three areas — **C**, **Python**, and **Math** — and submit your work in this
-GitHub repository.
+You'll answer questions in three areas — **C**, **Python**, and **Math**:
 
 - **[c.md](c.md)** — C questions
 - **[python.md](python.md)** — Python questions
@@ -33,29 +32,18 @@ GitHub repository.
 
 You're already in the repository — it was created from our template. Work directly in it:
 
-1. **Create three folders** for your solutions: `c/`, `python/`, and `math/`.
-2. **Save each answer** to the path shown in the table below.
-3. **Commit little and often** (e.g. one commit per question). Your commit history shows us your real
-   process, so don't paste everything in at the end.
-4. **Send us the repository URL** when you're done (make sure we have access if it's private).
+1. **Create folders** `c/`, `python/`, and `math/` for your answers, and save each answer to the path its
+   question gives (e.g. `c/vowels.c`).
+2. **Getting your code into the repo.** Write and test wherever you like (cs50.dev, Colab, locally), then
+   commit each file:
+   - **No git needed:** on your repo's page, use **Add file → Create new file** (paste your code) or
+     **Upload files**, then **Commit** — this works straight from the browser.
+   - **From Colab:** *File → Download → `.py`*, then upload it as above.
+   - **From cs50.dev or locally:** use the terminal — `git add`, `git commit`, `git push`.
+3. **Commit each task as you finish it**, not all at once — your commit history shows us your real process.
+4. **Math:** type your working in `math/solutions.md` (LaTeX, `$...$` inline / `$$...$$` display), **or**
+   commit clear photos/scans under `math/` (e.g. `math/m1.jpg`). Either way, show your working and label
+   each part **M-1**, **M-2**, **M-3**.
+5. **Send us your repository URL** when you're done (make sure we have access if it's private).
 
-| Question | Save your answer as |
-|----------|---------------------|
-| C-1 (vowels) | `c/vowels.c` |
-| C-2 (linked list) | `c/linkedlist.c` |
-| Python 1 (word count) | `python/word_count.py` (+ `python/word_count_input.txt`) |
-| Python 2 (shapes) | `python/shapes.py` |
-| Python 3 (distances) | `python/distances.py` (+ `python/slow_distances.py`) |
-| Math M-1, M-2, M-3 | `math/solutions.md` |
-
-```bash
-git add c/vowels.c
-git commit -m "C-1: count vowels"
-git push
-```
-
-**Math** can be either typed in `math/solutions.md` using LaTeX (`$...$` inline, `$$...$$` display), **or**
-photographed/scanned and committed as images under `math/` (e.g. `math/m1.jpg`). Either way, **show your
-working**, not just the final answer, and label each part with its id (**M-1**, **M-2**, **M-3**).
-
-That's it — good luck, and remember the honest answer is the right answer here.
+Good luck — and remember, the honest answer is the right answer here.

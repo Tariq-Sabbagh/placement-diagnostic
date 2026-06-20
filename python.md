@@ -1,11 +1,5 @@
 # Python Questions
 
-Three short Python programs. For each, commit a `.py` file to the path shown with a one-sentence comment
-at the top explaining your approach. Don't paste code into this file. Leave a question blank if you haven't
-studied that topic; that's expected.
-
----
-
 ## 1. Word Frequencies
 
 Create a file `python/word_count_input.txt` containing exactly this text:
