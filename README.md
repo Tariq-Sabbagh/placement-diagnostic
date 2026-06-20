@@ -21,13 +21,6 @@ You'll answer questions in three areas — **C**, **Python**, and **Math**:
 
 ---
 
-## Setup (no installs required)
-
-- **C:** use [cs50.dev](https://cs50.dev) in your browser (it has a C compiler), or any local compiler.
-- **Python:** use [Google Colab](https://colab.research.google.com), or a local Python with `numpy`.
-
----
-
 ## How to submit
 
 1. **Make your own copy of this repo** — click **Use this template → Create a new repository** (or fork it).
