@@ -3,10 +3,28 @@
 // and note one sample run (input word -> count printed).
 
 #include <stdio.h>
+#include <ctype.h>
 
 int main(void)
 {
-    // TODO: read a single word from standard input and print how many vowels
-    // it contains (a, e, i, o, u in either case).
+    char word[100];
+  char vowels[5] = {'u', 'i', 'a', 'o', 'e'};
+  int count = 0;
+  scanf("%s", word);
+  for(int i = 0; word[i]; i++){
+  word[i] = tolower(word[i]);
+//   printf("%c" , word[i]);
+  for (int j = 0;j<5;j++)
+  {
+    //   printf("%c" , vowels[j]);
+      if(word[i]==vowels[j])
+      {
+          count++;
+      }
+  }
+}
+
+
+  printf("%d" , count);
     return 0;
 }
