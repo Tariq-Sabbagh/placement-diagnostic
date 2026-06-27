@@ -22,10 +22,18 @@ def slow(a, b):
 def fast(a, b):
     # TODO: return the same result as slow(a, b), using only NumPy operations
     # here — no `for` loops or list comprehensions.
-    raise NotImplementedError("Implement fast() using NumPy broadcasting.")
+    diff = a[:, np.newaxis, :] - b[np.newaxis, :, :]
+    return (diff * diff).sum(axis=2)
+    # raise NotImplementedError("Implement fast() using NumPy broadcasting.")
 
 
 if __name__ == "__main__":
-    a = np.array([[0, 0], [3, 4], [1, 2]])
-    b = np.array([[0, 0], [1, 1]])
+    a = np.array([[0, 0],
+                  [3, 4],
+                  [1, 2]])
+    
+    b = np.array([[0, 0],
+                  [1, 1]])
+    
+    
     print("Match:", np.allclose(np.array(slow(a, b)), fast(a, b)))
